@@ -55,12 +55,10 @@
   padding-top: 0;
   min-height: 100vh;
   position: relative;
+  height: initial;
   h1 {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+
     width: 1000px;
   }
   &__text {
@@ -83,9 +81,11 @@
   //background: gray;
   position: relative;
   width: 100%;
+  z-index: -1;
   //background: red;
   --spacing: 20px;
   img {
+    z-index: 10;
     &:nth-child(1) {
       position: absolute;
       left: 50%;
@@ -95,6 +95,8 @@
       position: absolute;
       left: 50%;
       transform: translateX(calc(-200% - 25px)) translateY(-50%) translateY(-150px);
+      display: none;
+
     }
     &:nth-child(3) {
       position: absolute;
@@ -104,22 +106,22 @@
     &:nth-child(4) {
       position: absolute;
       left: 50%;
+      display: none;
       transform: translateX(calc(25px + 100%) ) translateY(720px) translateY(-150px);
     }
 
   }
-  //div {
-  //  background: red;
-  //  margin-top: auto;
-  //  margin-bottom: 0;
-  //  height: 2px;
-  //}
 
 }
 .sticky {
-  //position: sticky;
-  //bottom: 30px;
-  //background: red;
-  //left: 50%;
+  position: sticky;
+  height: fit-content;
+  margin: 0 auto;
+  top: 300px;
+  padding-bottom: 150px;
+  z-index: 20;
+  mix-blend-mode: difference;
 }
+
+
 </style>
