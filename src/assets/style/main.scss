@@ -5,6 +5,7 @@ body {
   background: $Dark-100;
   color: $Dark-0;
   font-family: Inter, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .flex {
@@ -24,7 +25,6 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 80px;
   overflow: hidden;
 }
 
@@ -33,6 +33,14 @@ h1 {
   font-weight: 600;
   font-size: 100px;
   line-height: 100px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100px;
+  line-height: 130%;
+  color: #464646;
 }
 
 p {

@@ -1,10 +1,29 @@
 <template>
   <section class="intro">
-    <h1>
-      Today's investments <br>
-      affect tomorrow
-    </h1>
-    <div class="intro__text">
+    <div class="intro-background">
+      <img
+        src="/left.svg"
+        alt=""
+      >
+      <img
+        src="/left.svg"
+        alt=""
+      >
+      <img
+        src="/right.svg"
+        alt=""
+      >
+      <img
+        src="/left.svg"
+        alt=""
+      >
+      <h1 class="sticky">
+        Today's investments <br>
+        affect tomorrow
+      </h1>
+    </div>
+
+    <div class="intro__text container">
       <p>
         Casl Invest is a financial<br>
         company that focuses<br>
@@ -23,9 +42,7 @@
         the standard financial products, whether<br>
         ETF or investments in commodities.<br>
       </p>
-      <p>
-
-      </p>
+      <p />
     </div>
   </section>
 </template>
@@ -35,11 +52,16 @@
 
 <style scoped lang="scss">
 .intro {
-  padding-top: 340px;
+  padding-top: 0;
   min-height: 100vh;
+  position: relative;
   h1 {
     text-align: center;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
   }
   &__text {
     p {
@@ -52,5 +74,52 @@
       }
     }
   }
+}
+.intro-background {
+  min-height: 1000px;
+  max-width: 100vw;
+  padding-top: 340px;
+  //overflow-x: hidden;
+  //background: gray;
+  position: relative;
+  width: 100%;
+  //background: red;
+  --spacing: 20px;
+  img {
+    &:nth-child(1) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-100%) translateX(-5px) translateY(-150px);
+    }
+    &:nth-child(2) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(calc(-200% - 25px)) translateY(-50%) translateY(-150px);
+    }
+    &:nth-child(3) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(5px) translateY(370px) translateY(-150px);
+    }
+    &:nth-child(4) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(calc(25px + 100%) ) translateY(720px) translateY(-150px);
+    }
+
+  }
+  //div {
+  //  background: red;
+  //  margin-top: auto;
+  //  margin-bottom: 0;
+  //  height: 2px;
+  //}
+
+}
+.sticky {
+  //position: sticky;
+  //bottom: 30px;
+  //background: red;
+  //left: 50%;
 }
 </style>

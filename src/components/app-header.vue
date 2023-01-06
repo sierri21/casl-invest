@@ -1,29 +1,31 @@
 <template>
-  <header class="header">
-    <div class="logo">
-      <img
-        src="/logo.svg"
-        alt="logo"
-      >
-    </div>
-    <nav class="navigation">
-      <ul class="flex">
-        <li
-          v-for="link in links"
-          :key="link.id"
+  <div class="header__wrapper">
+    <header class="header container">
+      <div class="logo">
+        <img
+          src="/logo.svg"
+          alt="logo"
         >
-          <a href="">
-            {{ link.text }}
-          </a>
-        </li>
-        <li>
-          <button>
-            Contact us
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      </div>
+      <nav class="navigation">
+        <ul class="flex">
+          <li
+            v-for="link in links"
+            :key="link.id"
+          >
+            <a href="">
+              {{ link.text }}
+            </a>
+          </li>
+          <li>
+            <button>
+              Contact us
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script setup>
@@ -36,13 +38,21 @@ const links = [
 
 <style scoped lang="scss">
 .header {
-  position: sticky;
-  left: 0;
-  right: 0;
+
   display: flex;
   justify-content: space-between;
-  padding: 40px 40px 0;
+  //padding: 40px 40px 0;
+  padding-top: 40px;
   align-items: center;
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #111111;
+    z-index: 200;
+    box-shadow: 0 10px 20px 10px #111111 ;
+
+  }
 }
 .navigation {
   ul {
