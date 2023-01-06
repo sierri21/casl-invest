@@ -42,7 +42,7 @@ const links = [
   display: flex;
   justify-content: space-between;
   //padding: 40px 40px 0;
-  padding-top: 40px;
+  padding: 40px 0;
   align-items: center;
   &__wrapper {
     position: fixed;

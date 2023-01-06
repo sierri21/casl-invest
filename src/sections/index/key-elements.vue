@@ -13,7 +13,7 @@
       class="element-card"
     >
       <img
-        src=""
+        :src="card.img"
         alt=""
       >
       <h3 v-text="card.title" />
@@ -24,9 +24,9 @@
 
 <script setup>
 const cards = [
-	{ img: '', title: 'Reliable storage', text: 'Reliable custodial solution allows for more secure storage and access to assets.'},
-	{ img: '', title: 'Risk hedging', text: 'Crypto derivatives, such as futures and options, are used to minimize volatility risk.'},
-	{ img: '', title: 'Audited results', text: 'The company\'s financial results from investment activities are auditable and open for review.'}
+	{ img: '/images/key-elems/card1.jpg', title: 'Reliable storage', text: 'Reliable custodial solution allows for more secure storage and access to assets.'},
+	{ img: '/images/key-elems/card2.jpg', title: 'Risk hedging', text: 'Crypto derivatives, such as futures and options, are used to minimize volatility risk.'},
+	{ img: '/images/key-elems/card3.jpg', title: 'Audited results', text: 'The company\'s financial results from investment activities are auditable and open for review.'}
 ]
 </script>
 
@@ -55,8 +55,11 @@ const cards = [
   img {
     grid-area: image;
     display: block;
-    background: red;
-    height: 250px;
+    //height: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #111111;
   }
   h3 {
     grid-area: title;
