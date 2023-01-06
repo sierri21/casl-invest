@@ -1,30 +1,36 @@
 <template>
-<header class="header">
-  <div class="logo">
-    <img src="/logo.svg" alt="logo">
-  </div>
-  <nav class="navigation">
-    <ul class="flex">
-      <li v-for="link in links" :key="link.id">
-        <a href="">
-        {{ link.text }}
-        </a>
-      </li>
-      <li>
-        <button>
-          Contact us
-        </button>
-      </li>
-    </ul>
-  </nav>
-</header>
+  <header class="header">
+    <div class="logo">
+      <img
+        src="/logo.svg"
+        alt="logo"
+      >
+    </div>
+    <nav class="navigation">
+      <ul class="flex">
+        <li
+          v-for="link in links"
+          :key="link.id"
+        >
+          <a href="">
+            {{ link.text }}
+          </a>
+        </li>
+        <li>
+          <button>
+            Contact us
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script setup>
 const links = [
-  { text: 'About', id: 'About' },
-  { text: 'Services', id: 'Services' },
-  { text: 'Analysis', id: 'Analysis' },
+	{ text: 'About', id: 'About' },
+	{ text: 'Services', id: 'Services' },
+	{ text: 'Analysis', id: 'Analysis' },
 ]
 </script>
 
