@@ -1,22 +1,24 @@
 <template>
   <section class="intro">
     <div class="intro-background">
-      <img
-        src="/left.svg"
-        alt=""
-      >
-      <img
-        src="/left.svg"
-        alt=""
-      >
-      <img
-        src="/right.svg"
-        alt=""
-      >
-      <img
-        src="/left.svg"
-        alt=""
-      >
+      <div class="images">
+        <img
+          src="/left.svg"
+          alt=""
+        >
+        <img
+          src="/left.svg"
+          alt=""
+        >
+        <img
+          src="/right.svg"
+          alt=""
+        >
+        <img
+          src="/left.svg"
+          alt=""
+        >
+      </div>
       <h1 class="sticky">
         Today's investments <br>
         affect tomorrow
@@ -56,6 +58,7 @@
   min-height: 100vh;
   position: relative;
   height: initial;
+  //overflow: hidden;
   h1 {
     text-align: center;
 
@@ -74,6 +77,7 @@
   }
 }
 .intro-background {
+  // попробовать сделать через fixed
   min-height: 1000px;
   max-width: 100vw;
   padding-top: 340px;
@@ -84,30 +88,46 @@
   z-index: -1;
   //background: red;
   --spacing: 20px;
+  .images {
+    //max-width: 100vw;
+    //background: red;
+    //position: absolute;
+    //height: 1000px;
+    //width: 100%;
+  }
   img {
     z-index: 10;
+    object-fit: contain;
     &:nth-child(1) {
       position: absolute;
       left: 50%;
-      transform: translateX(-100%) translateX(-5px) translateY(-150px);
+      width: 546px;
+      transform: translateX(-546px) translateX(-5px) translateY(-150px);
     }
     &:nth-child(2) {
       position: absolute;
       left: 50%;
-      transform: translateX(calc(-200% - 25px)) translateY(-50%) translateY(-150px);
-      display: none;
+      //width: 150px;
+      object-fit: contain;
+      //background: red;
+      transform: translateX(calc(-546px - 25px - 100%)) translateY(-50%) translateY(-150px);
+      //display: none;
+      //width: 12px;
 
     }
     &:nth-child(3) {
       position: absolute;
       left: 50%;
+      width: 546px;
       transform: translateX(5px) translateY(370px) translateY(-150px);
     }
     &:nth-child(4) {
       position: absolute;
       left: 50%;
-      display: none;
-      transform: translateX(calc(25px + 100%) ) translateY(720px) translateY(-150px);
+      object-fit: contain;
+      //display: none;
+      //clip-path: polygon(0 0, 100px 0, 100px 100%, 0 100%);
+      transform: translateX(calc(25px + 546px) ) translateY(720px) translateY(-150px);
     }
 
   }
