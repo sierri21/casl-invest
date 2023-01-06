@@ -6,3 +6,18 @@ body {
   color: $Dark-0;
   font-family: Inter, Helvetica, Arial, sans-serif;
 }
+
+.flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: calc(1440px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
