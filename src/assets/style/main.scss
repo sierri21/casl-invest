@@ -1,7 +1,7 @@
 @import "./variables.scss";
 @import "reset-css/reset.css";
 
-body {
+body, html {
   background: $Dark-100;
   color: $Dark-0;
   font-family: Inter, Helvetica, Arial, sans-serif;

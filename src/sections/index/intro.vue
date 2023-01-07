@@ -1,24 +1,6 @@
 <template>
   <section class="intro">
     <div class="intro-background">
-      <div class="images">
-        <img
-          src="/left.svg"
-          alt=""
-        >
-        <img
-          src="/left.svg"
-          alt=""
-        >
-        <img
-          src="/right.svg"
-          alt=""
-        >
-        <img
-          src="/left.svg"
-          alt=""
-        >
-      </div>
       <h1 class="sticky">
         Today's investments <br>
         affect tomorrow
@@ -58,6 +40,9 @@
   min-height: 100vh;
   position: relative;
   height: initial;
+  background: url('/images/background.svg') center/ contain no-repeat;
+  //mix-blend-mode: difference;
+  //background-blend-mode: difference;
   //overflow: hidden;
   h1 {
     text-align: center;
@@ -85,7 +70,7 @@
   //background: gray;
   position: relative;
   width: 100%;
-  z-index: -1;
+  //z-index: -1;
   //background: red;
   --spacing: 20px;
   .images {
@@ -141,6 +126,7 @@
   padding-bottom: 150px;
   z-index: 20;
   mix-blend-mode: difference;
+  background-blend-mode: difference;
 }
 
 

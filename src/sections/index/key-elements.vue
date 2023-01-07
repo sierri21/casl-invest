@@ -67,6 +67,7 @@ const cards = [
     font-weight: 700;
     font-size: 34px;
     line-height: 130%;
+    align-self: end;
   }
   p {
     grid-area: text;
