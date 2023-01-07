@@ -40,7 +40,6 @@
   min-height: 100vh;
   position: relative;
   height: initial;
-  background: url('/images/background.svg') center / contain no-repeat;
   h1 {
     text-align: center;
 
@@ -76,42 +75,6 @@
     //position: absolute;
     //height: 1000px;
     //width: 100%;
-  }
-  img {
-    z-index: 10;
-    object-fit: contain;
-    &:nth-child(1) {
-      position: absolute;
-      left: 50%;
-      width: 546px;
-      transform: translateX(-546px) translateX(-5px) translateY(-150px);
-    }
-    &:nth-child(2) {
-      position: absolute;
-      left: 50%;
-      //width: 150px;
-      object-fit: contain;
-      //background: red;
-      transform: translateX(calc(-546px - 25px - 100%)) translateY(-50%) translateY(-150px);
-      //display: none;
-      //width: 12px;
-
-    }
-    &:nth-child(3) {
-      position: absolute;
-      left: 50%;
-      width: 546px;
-      transform: translateX(5px) translateY(370px) translateY(-150px);
-    }
-    &:nth-child(4) {
-      position: absolute;
-      left: 50%;
-      object-fit: contain;
-      //display: none;
-      //clip-path: polygon(0 0, 100px 0, 100px 100%, 0 100%);
-      transform: translateX(calc(25px + 546px) ) translateY(720px) translateY(-150px);
-    }
-
   }
 
 }

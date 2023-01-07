@@ -32,13 +32,14 @@ defineProps({
 	},
 	date: {
 		type: String,
-    default: ''
+		default: ''
 	}
 })
 </script>
 
 <style scoped lang="scss">
 .card {
+  cursor: pointer;
   text-align: start;
   img {
     display: block;
