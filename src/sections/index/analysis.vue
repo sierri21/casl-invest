@@ -10,8 +10,7 @@
       <app-news-card
         v-for="card in news"
         :key="card.title"
-        :title="card.title"
-        :text="card.text"
+        v-bind="card"
       />
     </div>
   </section>
@@ -21,7 +20,9 @@
 import AppNewsCard from '~/components/app-news-card.vue'
 
 const news = [
-	{img: '', text: '1', title: '1', date: '22'}
+	{image: '/images/lorem/new1.jpg', text: 'Как выцепить нужного человечка? Разбираемся с аналитиками', title: 'Когда абонент не абонент', date: 'Today'},
+	{image: '/images/lorem/new2.jpg', text: 'Прямо вот с соседнего стола доносится, свежачок', title: 'Платеж увидел, запустил в работу', date: 'Nov 27, 2022'},
+	{image: '/images/lorem/new3.jpg', text: 'Капуста на дороге не валяется, пару месяцев придется за спасибо', title: 'Учимся избегать залетов', date: 'Nov 26, 2022'},
 ]
 </script>
 
@@ -44,5 +45,8 @@ const news = [
 }
 .news {
   margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 422.65px);
+  justify-content: center;
 }
 </style>

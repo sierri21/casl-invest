@@ -38,7 +38,8 @@
 <style scoped lang="scss">
 .tools {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  //grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 516px 534px;
   grid-template-areas: '. headline' '. headline';
   grid-column-gap: 230px;
   grid-row-gap: 75px;
@@ -51,6 +52,7 @@
   }
 }
 .tools-card {
+  justify-self: start;
   h3 {
     font-style: normal;
     font-weight: 600;
@@ -69,7 +71,7 @@
       width: 100%;
       height: 3px;
       background: linear-gradient(to right, #111111, #F9A400);
-      z-index: -1;
+      //z-index: -1;
     }
   }
    p {

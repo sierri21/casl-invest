@@ -72,15 +72,12 @@ const links = [
       }
     }
     button {
-      //background: #F6F6F6;
-      //mix-blend-mode: difference;
       border-radius: 18px;
       padding: 8px 14px;
       cursor: pointer;
       position: relative;
       border: none;
       outline: none;
-      //transition: all .3s ease;
       &:hover {
         background: linear-gradient(45deg, #F9A400 0%, #F9D100 100%);
       }

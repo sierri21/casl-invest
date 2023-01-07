@@ -8,49 +8,46 @@
     </div>
     <div class="contacts footer__contacts">
       <table>
-        <tr>
+        <tr
+          v-for="contact in contacts"
+          :key="contact.text"
+        >
           <td class="contacts__label">
-            Email
+            {{ contact.label }}
           </td>
           <td class="contacts__info">
-            corporate@email.com
+            <a href="">
+              {{ contact.text }}
+            </a>
           </td>
         </tr>
-        <tr>
-          <td class="contacts__label">
-            Phone
-          </td>
-          <td class="contacts__info">
-            +123 456 7890
-          </td>
-        </tr>
-        <tr>
-          <td class="contacts__label">
-            Telegram
-          </td>
-          <td class="contacts__info">
-            @caslinvest
-          </td>
-        </tr>
-        <tr>
-          <td class="contacts__label">
+        <tr valign="top">
+          <td
+            valign="top"
+            class="contacts__label"
+            style="vertical-align: top"
+          >
             App
           </td>
           <td class="contacts__info">
-            <img
-              src=""
-              alt="app"
-            >
+            <a href="">
+              <img
+                src="/images/App-Store-Button.svg"
+                alt="app"
+              >
+            </a>
           </td>
         </tr>
       </table>
     </div>
     <div class="links footer__links">
       <ul>
-        <li><a href="">Investment memorandum</a></li>
-        <li><a href="">Terms and conditions</a></li>
-        <li><a href="">Privacy policy</a></li>
-        <li><a href="">Cookie policy</a></li>
+        <li
+          v-for="link in legalLinks"
+          :key="link.text"
+        >
+          <a href="">{{ link.text }}</a>
+        </li>
       </ul>
     </div>
     <div class="copyright footer__copyright">
@@ -72,6 +69,19 @@
 </template>
 
 <script setup>
+const contacts = [
+	{ text: 'corporate@email.com', link: '', label: 'Email'},
+	{ text: '+123 456 7890', link: '', label: 'Phone'},
+	{ text: '@caslinvest', link: '', label: 'Telegram'},
+]
+
+const legalLinks = [
+	{text: 'Investment memorandum', link: ''},
+	{text: 'Terms and conditions', link: ''},
+	{text: 'Privacy policy', link: ''},
+	{text: 'Cookie policy', link: ''}
+]
+
 </script>
 
 <style scoped lang="scss">
@@ -107,6 +117,7 @@
       grid-area: text;
     }
   }
+
   .contacts {
     padding-bottom: 38px;
 
@@ -116,7 +127,7 @@
       width: 180px;
     }
 
-    td {
+    td, td a {
       font-weight: 300;
       font-size: 24px;
       line-height: 130%;
@@ -126,9 +137,25 @@
 
       padding-bottom: 20px;
     }
-    &__info {
+    &__info a {
       color: $Dark-70;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    a {
+      img {
+        background: $Dark-100;
 
+        &:hover {
+          background: $Dark-90;
+        }
+
+        &:active {
+          background: $Dark-80;
+        }
+      }
     }
   }
 
@@ -149,6 +176,9 @@
           color: $Dark-70;
 
           text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

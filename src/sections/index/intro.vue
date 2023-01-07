@@ -40,10 +40,7 @@
   min-height: 100vh;
   position: relative;
   height: initial;
-  background: url('/images/background.svg') center/ contain no-repeat;
-  //mix-blend-mode: difference;
-  //background-blend-mode: difference;
-  //overflow: hidden;
+  background: url('/images/background.svg') center / contain no-repeat;
   h1 {
     text-align: center;
 
