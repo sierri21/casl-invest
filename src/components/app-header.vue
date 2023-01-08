@@ -66,6 +66,9 @@ onMounted(() => {
     cursor: pointer;
     position: relative;
     border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
     outline: none;
     &:hover {
       background: linear-gradient(45deg, #F9A400 0%, #F9D100 100%);
@@ -83,7 +86,7 @@ onMounted(() => {
     //left: 0;
     //right: 0;
     //background: #111111;
-    //z-index: 200;
+    z-index: 200;
     //box-shadow: 0 10px 20px 10px #111111 ;
 
   }

@@ -43,7 +43,7 @@
   h1 {
     text-align: center;
 
-    width: 1000px;
+    max-width: 1000px;
   }
   &__text {
     p {

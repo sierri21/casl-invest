@@ -54,7 +54,7 @@ defineProps({
     font-size: 26px;
     line-height: 130%;
     color: $Dark-10;
-    width: 388px;
+    max-width: 388px;
     padding-left: 6px;
   }
   p {
@@ -63,7 +63,7 @@ defineProps({
     font-size: 24px;
     line-height: 150%;
     color: $Dark-70;
-    width: 388px;
+    max-width: 388px;
 
     margin-bottom: 12px;
   }
@@ -74,7 +74,7 @@ defineProps({
     line-height: 150%;
 
     color: $Dark-80;
-    width: 388px;
+    max-width: 388px;
   }
   &:hover {
     h4 {
