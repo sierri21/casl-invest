@@ -61,7 +61,7 @@
   // попробовать сделать через fixed
   min-height: 1000px;
   max-width: 100vw;
-  padding-top: 340px;
+  padding-top: 203px;
   //overflow-x: hidden;
   //background: gray;
   position: relative;
@@ -83,7 +83,7 @@
   height: fit-content;
   margin: 0 auto;
   top: 300px;
-  padding-bottom: 150px;
+  padding-bottom: 166px;
   z-index: 20;
   mix-blend-mode: difference;
   background-blend-mode: difference;

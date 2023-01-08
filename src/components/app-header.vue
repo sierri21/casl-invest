@@ -53,12 +53,10 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .header {
-  //background: red;
-  //background: red;
   display: flex;
+  box-sizing: border-box;
   justify-content: space-between;
-  //padding: 40px 40px 0;
-  padding: 40px 0;
+  padding: 40px 40px;
   align-items: center;
   button {
     border-radius: 18px;
@@ -82,13 +80,7 @@ onMounted(() => {
     position: sticky;
     top: 0;
     mix-blend-mode: difference;
-
-    //left: 0;
-    //right: 0;
-    //background: #111111;
     z-index: 200;
-    //box-shadow: 0 10px 20px 10px #111111 ;
-
   }
 }
 .navigation {

@@ -12,7 +12,7 @@ import IndexPage from '~/pages/index-page.vue'
 .main-wrapper {
   max-width: 100vw;
   width: 100%;
-  background: url('/images/background.svg') center top / 100% 2361px  repeat-x;
+  background: url('/images/background.svg') center -172px / 100% 2361px  repeat-x;
 
 
 }

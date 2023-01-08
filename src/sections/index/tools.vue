@@ -58,17 +58,19 @@ const { stop } = useIntersectionObserver(
   grid-template-columns: 516px 534px;
   grid-template-areas: '. headline' '. headline';
   grid-column-gap: 230px;
-  grid-row-gap: 75px;
+  grid-row-gap: 28px;
   align-items: center;
   justify-items: center;
-  padding: 120px 0 113px;
+  padding: 227px 40px 113px;
   &__headline {
     grid-area: headline;
     max-width: 534px;
+    //display: none;
   }
 }
 .tools-card {
   justify-self: start;
+  padding-top: 40px;
   h3 {
     font-style: normal;
     font-weight: 600;
@@ -94,7 +96,7 @@ const { stop } = useIntersectionObserver(
    p {
      font-weight: 300;
      font-size: 26px;
-     line-height: 31px;
+     line-height: 170%;
      color: $Dark-70;
      max-width: 482px;
    }

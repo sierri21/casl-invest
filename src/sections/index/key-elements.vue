@@ -33,12 +33,12 @@ const cards = [
 <style scoped lang="scss">
 .key-elements {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 543px 1fr;
   grid-template-rows: repeat(3, 250px);
   grid-template-areas: 'headline .' 'headline .' 'headline .';
   align-items: center;
   grid-column-gap: 60px;
-  padding: 100px 0;
+  padding: 291px 40px 292px;
   h2 {
     grid-area: headline;
   }

@@ -86,12 +86,13 @@ const legalLinks = [
 
 <style scoped lang="scss">
   .footer {
-    padding-top: 320px;
+    padding-top: 308px;
     padding-bottom: 70px;
 
     display: grid;
     grid-template-columns: 450px 641px;
     grid-column-gap: 189px;
+    grid-template-rows: auto;
 
     grid-template-areas:
         'logo logo'
@@ -101,7 +102,7 @@ const legalLinks = [
     ;
 
     &__logo {
-      margin-bottom: 50px;
+      margin-bottom: 38px;
       grid-area: logo;
     }
     &__contacts {
@@ -119,7 +120,7 @@ const legalLinks = [
   }
 
   .contacts {
-    padding-bottom: 38px;
+    padding-bottom: 21px;
 
     border-bottom: 2px solid $Dark-90;
 
@@ -160,7 +161,7 @@ const legalLinks = [
   }
 
   .links {
-    padding: 38px 0;
+    padding: 26px 0 13px;
     border-bottom: 2px solid $Dark-90;
     ul {
       li {

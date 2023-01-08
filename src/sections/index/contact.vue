@@ -19,8 +19,8 @@
   align-items: center;
 
   grid-gap: 40px;
-  padding-top: 135px;
-  padding-bottom: 108px;
+  padding-top: 335px;
+  //padding-bottom: 0px;
 
   text-align: center;
 
