@@ -1,10 +1,13 @@
 <template>
-  <section class="tools container">
+  <section
+    ref="tools"
+    class="tools container"
+  >
     <h2 class="tools__headline">
       Balanced investment tools <br>based on your risk appetite
     </h2>
     <div class="tools-card">
-      <h3>
+      <h3 :style="{'--visible': !isElementVisible ? '-100%' : '0'}">
         Portfolio management
       </h3>
       <p>
@@ -17,7 +20,7 @@
       </p>
     </div>
     <div class="tools-card">
-      <h3>
+      <h3 :style="{'--visible': !isElementVisible ? '-100%' : '0'}">
         Index investing
       </h3>
       <p>
@@ -33,12 +36,25 @@
 </template>
 
 <script setup>
+
+import {ref} from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const tools = ref(null)
+const isElementVisible = ref(false)
+
+// eslint-disable-next-line no-unused-vars
+const { stop } = useIntersectionObserver(
+	tools,
+	([{ isIntersecting }]) => {
+		isElementVisible.value = isIntersecting
+	},
+)
 </script>
 
 <style scoped lang="scss">
 .tools {
   display: grid;
-  //grid-template-columns: repeat(2, 1fr);
   grid-template-columns: 516px 534px;
   grid-template-areas: '. headline' '. headline';
   grid-column-gap: 230px;
@@ -71,7 +87,8 @@
       width: 100%;
       height: 3px;
       background: linear-gradient(to right, #111111, #F9A400);
-      //z-index: -1;
+      transition: all .3s .3s ease ;
+      transform: translateX(var(--visible));
     }
   }
    p {
