@@ -1,6 +1,6 @@
 <template>
   <div class="header__wrapper">
-    <header class="header container">
+    <header class="header ">
       <div class="logo">
         <img
           src="/images/logo.svg"
@@ -16,7 +16,7 @@
             v-for="link in links"
             :key="link.id"
           >
-            <a href="">
+            <a :href="'#' + link.id">
               {{ link.text }}
             </a>
           </li>
@@ -35,9 +35,9 @@ import {onMounted, ref} from 'vue'
 const navigation = ref(true)
 
 const links = [
-	{ text: 'About', id: 'About' },
-	{ text: 'Services', id: 'Services' },
-	{ text: 'Analysis', id: 'Analysis' },
+	{ text: 'About', id: 'about' },
+	{ text: 'Services', id: 'services' },
+	{ text: 'Analysis', id: 'analysis' },
 ]
 
 onMounted(() => {
@@ -56,7 +56,7 @@ onMounted(() => {
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  padding: 40px 40px;
+  padding: 40px 80px;
   align-items: center;
   button {
     border-radius: 18px;
@@ -98,8 +98,14 @@ onMounted(() => {
     a {
       color: $Dark-60;
       text-decoration: none;
+      display: inline-block;
+      padding-bottom: 8px;
+      transition: box-shadow .3s ease;
       &:hover {
-        text-decoration: underline;
+        //border-bottom: ;
+        transition: box-shadow .3s ease;
+        box-shadow: inset 0px -2px 0px #FFFFFF;
+        //text-decoration: underline;
       }
     }
 

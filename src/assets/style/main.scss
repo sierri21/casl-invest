@@ -6,6 +6,8 @@ body, html {
   color: $Dark-0;
   font-family: Inter, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 5s;
 }
 
 .flex {

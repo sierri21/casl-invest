@@ -16,7 +16,7 @@
             {{ contact.label }}
           </td>
           <td class="contacts__info">
-            <a href="">
+            <a :href="contact.link">
               {{ contact.text }}
             </a>
           </td>
@@ -46,7 +46,7 @@
           v-for="link in legalLinks"
           :key="link.text"
         >
-          <a href="">{{ link.text }}</a>
+          <a :href="link.link" target="_blank">{{ link.text }}</a>
         </li>
       </ul>
     </div>
@@ -70,16 +70,16 @@
 
 <script setup>
 const contacts = [
-	{ text: 'corporate@email.com', link: '', label: 'Email'},
-	{ text: '+123 456 7890', link: '', label: 'Phone'},
+	{ text: 'corporate@email.com', link: 'mailto:corporate@email.com', label: 'Email'},
+	{ text: '+123 456 7890', link: 'tel:+1234567890', label: 'Phone'},
 	{ text: '@caslinvest', link: '', label: 'Telegram'},
 ]
 
 const legalLinks = [
 	{text: 'Investment memorandum', link: ''},
-	{text: 'Terms and conditions', link: ''},
-	{text: 'Privacy policy', link: ''},
-	{text: 'Cookie policy', link: ''}
+	{text: 'Terms and conditions', link: '/docs/Casl_Invest_Terms_of_Use.pdf'},
+	{text: 'Privacy policy', link: '/docs/Casl_Invest_PrivPolicy.pdf'},
+	{text: 'KYC/AML Policy', link: '/docs/Casl_Invest_AML_policy.pdf'}
 ]
 
 </script>

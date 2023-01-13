@@ -1,13 +1,14 @@
 <template>
   <section
+      id="about"
     ref="tools"
     class="tools container"
   >
     <h2 class="tools__headline">
       Balanced investment tools <br>based on your risk appetite
     </h2>
-    <div class="tools-card">
-      <h3 :style="{'--visible': !isElementVisible ? '-100%' : '0'}">
+    <div class="tools-card" >
+      <h3 :style="{'--visible': isElementVisible ? '100%' : '0%'}">
         Portfolio management
       </h3>
       <p>
@@ -19,8 +20,8 @@
         Success fee up to 30%
       </p>
     </div>
-    <div class="tools-card">
-      <h3 :style="{'--visible': !isElementVisible ? '-100%' : '0'}">
+    <div class="tools-card" >
+      <h3 :style="{'--visible': isElementVisible ? '100%' : '0%'}">
         Index investing
       </h3>
       <p>
@@ -86,11 +87,11 @@ const { stop } = useIntersectionObserver(
       position: absolute;
       bottom: -4px;
       left: 0;
-      width: 100%;
+      width: var(--visible);
       height: 3px;
       background: linear-gradient(to right, #111111, #F9A400);
-      transition: all .3s .3s ease ;
-      transform: translateX(var(--visible));
+      transition: width 2s .3s ease ;
+      //transform: translateX(var(--visible));
     }
   }
    p {
