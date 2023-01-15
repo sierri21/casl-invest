@@ -58,10 +58,28 @@ const { stop } = useIntersectionObserver(
   display: grid;
   grid-template-columns: 516px 534px;
   grid-template-areas: '. headline' '. headline';
+
   grid-column-gap: 230px;
   grid-row-gap: 28px;
+  @media screen and (max-width: 1440px) {
+    grid-column-gap: 175px;
+  }
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: 420px 1fr;
+    grid-column-gap: 100px;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 300px 1fr;
+    grid-column-gap: 100px;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 145px 1fr;
+    grid-column-gap: 30px;
+  }
+
   align-items: center;
   justify-items: center;
+
   padding: 148px 40px 113px;
   &__headline {
     grid-area: headline;
@@ -71,7 +89,7 @@ const { stop } = useIntersectionObserver(
 }
 .tools-card {
   justify-self: start;
-  padding-top: 40px;
+  padding-top: 38px;
   h3 {
     font-style: normal;
     font-weight: 600;

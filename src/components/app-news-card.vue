@@ -48,6 +48,9 @@ defineProps({
     height: 320px;
     object-fit: cover;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
   }
   h4 {
     margin-top: 26px;

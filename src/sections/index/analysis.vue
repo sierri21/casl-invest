@@ -61,5 +61,14 @@ const news = [
   grid-template-columns: repeat(3, 422.65px);
   justify-content: center;
   justify-items: center;
+  @media screen and (max-width: 1439px) {
+    padding: 0 40px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 40px;
+    grid-template-columns: 1fr;
+  }
+
 }
 </style>

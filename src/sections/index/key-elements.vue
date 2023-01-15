@@ -42,6 +42,23 @@ const cards = [
   align-items: center;
   grid-column-gap: 60px;
   padding: 291px 40px 292px;
+  @media screen and (max-width: 1439px) {
+    grid-template-columns: 470px 1fr;
+  }
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: repeat(3, 170px);
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(3, 140px);
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 20px;
+    grid-template-rows: repeat(3, 150px);
+  }
+
   h2 {
     grid-area: headline;
   }
@@ -53,8 +70,18 @@ const cards = [
   grid-row-gap: 10px;
   height: 250px;
   align-content: center;
-
   grid-template-areas: 'image title' 'image text';
+
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: 200px 1fr;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 150px 1fr;
+  }
+  @media screen and (max-width: 768px) {
+    //grid-template-columns: 1fr;
+  }
+
   img {
     grid-area: image;
     display: block;

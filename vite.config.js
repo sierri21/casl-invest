@@ -15,7 +15,7 @@ export default defineConfig({
 			scss: {
 				additionalData: '@import "~/assets/style/variables.scss";'
 			}
-		}
+		},
 	},
 	server: {
 		open: true,
