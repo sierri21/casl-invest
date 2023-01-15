@@ -61,7 +61,7 @@ const { stop } = useIntersectionObserver(
 
   grid-column-gap: 230px;
   grid-row-gap: 28px;
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1439px) {
     grid-column-gap: 175px;
   }
   @media screen and (max-width: 1240px) {
@@ -93,7 +93,7 @@ const { stop } = useIntersectionObserver(
   h3 {
     font-style: normal;
     font-weight: 600;
-    font-size: calc(100vw * 48px / (1440px));
+    font-size: min(calc(100vw * 48px / (1440px)), 48px);
     line-height: 105%;
     color: #EDEDED;
     margin-bottom: 30px;
@@ -114,7 +114,7 @@ const { stop } = useIntersectionObserver(
   }
    p {
      font-weight: 300;
-     font-size: calc(100vw * 26px / (1440px));
+     font-size: min(calc(100vw * 26px / (1440px)), 26px);
      line-height: 170%;
      color: $Dark-70;
      max-width: 482px;

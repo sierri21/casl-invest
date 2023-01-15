@@ -50,7 +50,7 @@ const news = [
   }
   p {
     font-weight: 300;
-    font-size: calc(100vw * 26px / (1440px));
+    font-size: min(calc(100vw * 26px / (1440px)), 26px);
     line-height: 130%;
     color: $Dark-80;
   }

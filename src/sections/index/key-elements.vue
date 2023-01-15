@@ -95,7 +95,7 @@ const cards = [
     grid-area: title;
     font-style: normal;
     font-weight: 700;
-    font-size: calc(100vw * 34px / (1440px));
+    font-size: min(calc(100vw * 34px / (1440px)), 34px);
     line-height: 130%;
     align-self: end;
   }
@@ -103,7 +103,7 @@ const cards = [
     grid-area: text;
     font-style: normal;
     font-weight: 300;
-    font-size: calc(100vw * 26px / (1440px));
+    font-size: min(calc(100vw * 26px / (1440px)), 26px);
     line-height: 130%;
     color: $Dark-70;
   }

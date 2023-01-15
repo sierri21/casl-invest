@@ -30,7 +30,7 @@
 
   button {
     font-weight: 300;
-    font-size: calc(100vw * 100px / (1440px));
+    font-size: min(calc(100vw * 100px / (1440px)), 100px);
     line-height: 130%;
 
     color: $Dark-0;

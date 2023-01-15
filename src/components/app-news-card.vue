@@ -56,7 +56,7 @@ defineProps({
     margin-top: 26px;
     margin-bottom: 8px;
     font-weight: 700;
-    font-size: calc(100vw * 26px / (1440px));
+    font-size: min(calc(100vw * 26px / (1440px)), 26px);
     line-height: 130%;
     color: $Dark-10;
     max-width: 388px;
@@ -65,7 +65,7 @@ defineProps({
   p {
     padding-left: 6px;
     font-weight: 300;
-    font-size: calc(100vw * 24px / (1440px));
+    font-size: min(calc(100vw * 24px / (1440px)), 24px);
     line-height: 150%;
     color: $Dark-70;
     max-width: 388px;
@@ -75,7 +75,7 @@ defineProps({
   .date {
     padding-left: 6px;
     font-weight: 300;
-    font-size: calc(100vw * 16px / (1440px));
+    font-size: min(calc(100vw * 16px / (1440px)), 16px);
     line-height: 150%;
 
     color: $Dark-80;

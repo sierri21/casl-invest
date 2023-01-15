@@ -40,14 +40,14 @@ h1 {
   font-style: normal;
   font-weight: 600;
   //font-size: 100px;
-  font-size: calc(100vw * 100px / (1440px));
+  font-size: min(calc(100vw * 100px / (1440px)), 100px);
   line-height: 100%;
 }
 
 h2 {
   font-style: normal;
   font-weight: 300;
-  font-size: calc(100vw * 100px / (1440px));
+  font-size: min(calc(100vw * 100px / (1440px)), 100px);
   line-height: 130%;
   color: #464646;
 }
@@ -56,7 +56,7 @@ p {
   font-style: normal;
   font-weight: 500;
   //font-size: 40px;
-  font-size: calc(100vw * 40px / (1440px));
+  font-size: min(calc(100vw * 40px / (1440px)), 40px);
   line-height: 120%;
 }
 

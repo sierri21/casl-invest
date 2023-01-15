@@ -70,7 +70,7 @@ onMounted(() => {
     position: relative;
 
     font-weight: 500;
-    font-size: calc(100vw * 16px / (1440px));
+    font-size: min(calc(100vw * 16px / (1440px)), 16px);
     line-height: 125%;
 
     border-radius: 18px;
@@ -110,7 +110,7 @@ onMounted(() => {
     a, button {
       font-style: normal;
       font-weight: 500;
-      font-size: calc(100vw * 16px / (1440px));
+      font-size: min(calc(100vw * 16px / (1440px)), 16px);
       line-height: 125%;
     }
     a {
