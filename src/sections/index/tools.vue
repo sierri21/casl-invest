@@ -16,7 +16,7 @@
         Yield potential of over 50%<br>
         Denominated in USD or BTC<br>
         Minimum initial investment: USD 50,000<br>
-        Minimum investment period 12 months<br>
+        Minimum investment period: 12 months<br>
         Success fee up to 30%
       </p>
     </div>

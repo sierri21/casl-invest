@@ -17,7 +17,7 @@
         instruments, which<br>
         include
         <span class="yellow-text">digital assets</span>,<br>
-        <span class="yellow-text">blockchain projects</span>, and<br>
+        <span class="yellow-text">blockchain projects</span> and<br>
         <span class="yellow-text">decentralized finance</span>.
       </p>
       <p>
