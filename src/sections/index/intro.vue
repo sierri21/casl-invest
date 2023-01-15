@@ -37,55 +37,54 @@
 <style scoped lang="scss">
 .intro {
   padding-top: 0;
+
   max-width: 100vw;
-  //min-height: 100vh;
-  position: relative;
   height: initial;
+
+  position: relative;
+
   h1 {
     text-align: center;
-
     max-width: 1000px;
   }
+
   &__text {
     position: absolute;
     bottom: 82px;
     left: 50%;
     max-width: 1440px;
+    padding: 0 80px;
     transform: translateX(-50%);
+    box-sizing: border-box;
+
     p {
       margin-bottom: 50px;
+
       &:first-child {
         max-width: 480px;
       }
+
       &:last-child {
         max-width: 1080px;
       }
     }
   }
 }
+
 .intro-background {
-  //min-height: 1000px;
-  //height: 2009px;
+
   height: calc((2009px * 100vw) / (1440px));
   max-width: 100vw;
   width: 100%;
-  //max-width: 1440px;
-  //padding-top: 203px;
   position: relative;
-  //width: 100%;
-  --spacing: 20px;
-  .images {
-  }
-
 }
+
 .sticky {
   position: sticky;
   height: fit-content;
   margin: 0 auto;
   top: 339px;
-  //padding-top: 203px;
 
-  // TODO replace with variable
   padding-bottom: 973px;
   z-index: 20;
   mix-blend-mode: difference;

@@ -136,7 +136,7 @@ const legalLinks = [
 
     td, td a {
       font-weight: 300;
-      font-size: 24px;
+      font-size: calc(100vw * 24px / (1440px));
       line-height: 130%;
     }
     &__label {
@@ -177,7 +177,7 @@ const legalLinks = [
         }
         a {
           font-weight: 300;
-          font-size: 24px;
+          font-size: calc(100vw * 24px / (1440px));
           line-height: 130%;
 
           color: $Dark-70;
@@ -195,7 +195,7 @@ const legalLinks = [
     padding: 38px 0 0 ;
     p {
       font-weight: 300;
-      font-size: 24px;
+      font-size: calc(100vw * 24px / (1440px));
       line-height: 130%;
 
       color: $Dark-80;
@@ -205,7 +205,7 @@ const legalLinks = [
   .text {
     p {
       font-weight: 300;
-      font-size: 21px;
+      font-size: calc(100vw * 21px / (1440px));
       line-height: 130%;
 
       color: $Dark-80;

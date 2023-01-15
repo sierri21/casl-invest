@@ -75,7 +75,7 @@ const { stop } = useIntersectionObserver(
   h3 {
     font-style: normal;
     font-weight: 600;
-    font-size: 48px;
+    font-size: calc(100vw * 48px / (1440px));
     line-height: 105%;
     color: #EDEDED;
     margin-bottom: 30px;
@@ -96,7 +96,7 @@ const { stop } = useIntersectionObserver(
   }
    p {
      font-weight: 300;
-     font-size: 26px;
+     font-size: calc(100vw * 26px / (1440px));
      line-height: 170%;
      color: $Dark-70;
      max-width: 482px;

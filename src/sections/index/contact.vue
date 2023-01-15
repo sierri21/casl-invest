@@ -1,8 +1,13 @@
 <template>
   <section class="contact">
-    <button>
-      Contact us
-    </button>
+    <a
+      href="http://t.me/casl_support"
+      target="_blank"
+    >
+      <button>
+        Contact us
+      </button>
+    </a>
     <h2>
       Find out which investment product is best for you
     </h2>
@@ -20,13 +25,12 @@
 
   grid-gap: 40px;
   padding-top: 335px;
-  //padding-bottom: 0px;
 
   text-align: center;
 
   button {
     font-weight: 300;
-    font-size: 100px;
+    font-size: calc(100vw * 100px / (1440px));
     line-height: 130%;
 
     color: $Dark-0;

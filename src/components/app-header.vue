@@ -22,9 +22,14 @@
           </li>
         </ul>
       </nav>
-      <button>
-        Contact us
-      </button>
+      <a
+        href="http://t.me/casl_support"
+        target="_blank"
+      >
+        <button>
+          Contact us
+        </button>
+      </a>
     </header>
   </div>
 </template>
@@ -53,24 +58,33 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .header {
-  display: flex;
   box-sizing: border-box;
+
+  display: flex;
   justify-content: space-between;
-  padding: 40px 80px;
   align-items: center;
+
+  padding: 40px 80px;
+
   button {
-    border-radius: 18px;
-    padding: 8px 14px;
-    cursor: pointer;
     position: relative;
-    border: none;
+
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: calc(100vw * 16px / (1440px));
+    line-height: 125%;
+
+    border-radius: 18px;
+    border: none;
     outline: none;
+
+    padding: 8px 14px;
+
+    cursor: pointer;
+
     &:hover {
       background: linear-gradient(45deg, #F9A400 0%, #F9D100 100%);
     }
+
     &:active {
       background: linear-gradient(45deg, #DA8F00 0%, #DFBB00 100%);
     }
@@ -79,33 +93,35 @@ onMounted(() => {
   &__wrapper {
     position: sticky;
     top: 0;
-    mix-blend-mode: difference;
+
     z-index: 200;
+
+    mix-blend-mode: difference;
   }
 }
 .navigation {
   margin-left: auto;
   margin-right: 28px;
+
   ul {
     grid-gap: 32px;
     align-items: center;
+
     a, button {
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: calc(100vw * 16px / (1440px));
+      line-height: 125%;
     }
     a {
       color: $Dark-60;
       text-decoration: none;
       display: inline-block;
-      padding-bottom: 8px;
+      padding: 8px 0;
       transition: box-shadow .3s ease;
       &:hover {
-        //border-bottom: ;
         transition: box-shadow .3s ease;
         box-shadow: inset 0px -2px 0px #FFFFFF;
-        //text-decoration: underline;
       }
     }
 

@@ -5,7 +5,9 @@
       <intro />
       <tools />
       <key-elements />
-      <analysis />
+      <Suspense>
+        <analysis />
+      </Suspense>
     </div>
       
     <contact />

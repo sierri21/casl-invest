@@ -1,5 +1,8 @@
 <template>
-  <section class="key-elements container" id="services">
+  <section
+    id="services"
+    class="key-elements container"
+  >
     <h2>
       Key <br>
       elements <br>
@@ -65,7 +68,7 @@ const cards = [
     grid-area: title;
     font-style: normal;
     font-weight: 700;
-    font-size: 34px;
+    font-size: calc(100vw * 34px / (1440px));
     line-height: 130%;
     align-self: end;
   }
@@ -73,7 +76,7 @@ const cards = [
     grid-area: text;
     font-style: normal;
     font-weight: 300;
-    font-size: 26px;
+    font-size: calc(100vw * 26px / (1440px));
     line-height: 130%;
     color: $Dark-70;
   }
