@@ -10,11 +10,16 @@
       Monthly market reviews and results evaluation
     </p>
     <div class="news">
-      <app-news-card
+      <a
         v-for="card in news"
         :key="card.title"
-        v-bind="card"
-      />
+        :href="card.link"
+        target="_blank"
+      >
+        <app-news-card
+          v-bind="card"
+        />
+      </a>
     </div>
   </section>
 </template>
@@ -24,12 +29,14 @@ import AppNewsCard from '~/components/app-news-card.vue'
 
 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cslinvest2022')
 const { items } = await res.json()
+console.log(items
+)
 const news = items.slice(0, 3).map(el => {
 	return {
 		image: el.thumbnail,
-		text: el.description && 'Как выцепить нужного человечка? Разбираемся с аналитиками',
+		text: el.description.replace(/(\<(\/?[^>]+)>)/g, '').slice(0, 100) + '...',
 		title: el.title,
-		link: el.guid,
+		link: el.link,
 		date: el.pubDate.split(' ').at(0)
 	}
 })
@@ -61,6 +68,9 @@ const news = items.slice(0, 3).map(el => {
   grid-template-columns: repeat(3, 422.65px);
   justify-content: center;
   justify-items: center;
+  a {
+    text-decoration: none;
+  }
   @media screen and (max-width: 1439px) {
     padding: 0 40px;
     grid-template-columns: repeat(3, 1fr);
