@@ -37,7 +37,8 @@
 <style scoped lang="scss">
 .intro {
   padding-top: 0;
-  min-height: 100vh;
+  max-width: 100vw;
+  //min-height: 100vh;
   position: relative;
   height: initial;
   h1 {
@@ -46,6 +47,11 @@
     max-width: 1000px;
   }
   &__text {
+    position: absolute;
+    bottom: 82px;
+    left: 50%;
+    max-width: 1440px;
+    transform: translateX(-50%);
     p {
       margin-bottom: 50px;
       &:first-child {
@@ -58,23 +64,17 @@
   }
 }
 .intro-background {
-  // попробовать сделать через fixed
-  min-height: 1000px;
+  //min-height: 1000px;
+  //height: 2009px;
+  height: calc((2009px * 100vw) / (1440px));
   max-width: 100vw;
-  padding-top: 203px;
-  //overflow-x: hidden;
-  //background: gray;
-  position: relative;
   width: 100%;
-  //z-index: -1;
-  //background: red;
+  //max-width: 1440px;
+  //padding-top: 203px;
+  position: relative;
+  //width: 100%;
   --spacing: 20px;
   .images {
-    //max-width: 100vw;
-    //background: red;
-    //position: absolute;
-    //height: 1000px;
-    //width: 100%;
   }
 
 }
@@ -82,8 +82,11 @@
   position: sticky;
   height: fit-content;
   margin: 0 auto;
-  top: 300px;
-  padding-bottom: 166px;
+  top: 339px;
+  //padding-top: 203px;
+
+  // TODO replace with variable
+  padding-bottom: 973px;
   z-index: 20;
   mix-blend-mode: difference;
   background-blend-mode: difference;

@@ -1,13 +1,13 @@
 <template>
   <section
-      id="about"
+    id="about"
     ref="tools"
     class="tools container"
   >
     <h2 class="tools__headline">
       Balanced investment tools <br>based on your risk appetite
     </h2>
-    <div class="tools-card" >
+    <div class="tools-card">
       <h3 :style="{'--visible': isElementVisible ? '100%' : '0%'}">
         Portfolio management
       </h3>
@@ -20,7 +20,7 @@
         Success fee up to 30%
       </p>
     </div>
-    <div class="tools-card" >
+    <div class="tools-card">
       <h3 :style="{'--visible': isElementVisible ? '100%' : '0%'}">
         Index investing
       </h3>
@@ -62,7 +62,7 @@ const { stop } = useIntersectionObserver(
   grid-row-gap: 28px;
   align-items: center;
   justify-items: center;
-  padding: 227px 40px 113px;
+  padding: 148px 40px 113px;
   &__headline {
     grid-area: headline;
     max-width: 534px;

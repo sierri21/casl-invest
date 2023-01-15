@@ -20,7 +20,9 @@
 <script setup>
 import IndexPage from '~/pages/index-page.vue'
 import { ref } from 'vue'
-const preload = ref(true)
+const preload = ref(false)
+
+// const scale = window.innerWidth / 1440
 
 const videoHandler = () => {
 	preload.value = false
@@ -31,7 +33,8 @@ const videoHandler = () => {
 .main-wrapper {
   max-width: 100vw;
   width: 100%;
-  background: url('/images/background.svg') center -172px / 100% 2361px  repeat-x;
+  background: url('/images/background.svg') center 0 / 100vw no-repeat;
+  //transform-origin: inherit;
 }
 .preload {
   height: 100vh;
