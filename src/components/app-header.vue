@@ -65,6 +65,12 @@ onMounted(() => {
   align-items: center;
 
   padding: 40px 80px;
+  @media screen and (max-width: 1024px) {
+    padding: 20px 40px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
 
   button {
     position: relative;
@@ -129,7 +135,14 @@ onMounted(() => {
 }
 .logo {
   height: 40px;
+  @media screen and (max-width: 1240px) {
+    height: calc(100vw * 40px / (1440px))
+  }
   img {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
     mix-blend-mode: difference;
   }
 

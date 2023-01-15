@@ -28,6 +28,10 @@
 
   text-align: center;
 
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
+
   button {
     font-weight: 300;
     font-size: min(calc(100vw * 100px / (1440px)), 100px);

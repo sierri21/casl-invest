@@ -106,10 +106,28 @@ const legalLinks = [
         'links text'
         'copyright text'
     ;
+    @media screen and (max-width: 768px ){
+      grid-template-columns: 1fr;
+
+      grid-template-areas:
+        'logo'
+        'contacts'
+        'links '
+        'copyright'
+        'text'
+    ;
+    }
 
     &__logo {
       margin-bottom: 38px;
       grid-area: logo;
+      @media screen and (max-width: 768px) {
+        img {
+          width: 100px;
+          display: block;
+          object-fit: cover;
+        }
+      }
     }
     &__contacts {
       grid-area: contacts;

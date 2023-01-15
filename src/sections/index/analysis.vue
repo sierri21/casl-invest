@@ -24,21 +24,21 @@ import AppNewsCard from '~/components/app-news-card.vue'
 
 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cslinvest2022')
 const { items } = await res.json()
-// const news = items.slice(0, 3).map(el => {
-// 	return {
-// 		image: el.thumbnail,
-// 		text: el.description && 'Как выцепить нужного человечка? Разбираемся с аналитиками',
-// 		title: el.title,
-// 		link: el.guid,
-// 		date: el.pubDate.split(' ').at(0)
-// 	}
-// })
-
-const news = [
-	{image: '/images/lorem/new1.jpg', text: 'Как выцепить нужного человечка? Разбираемся с аналитиками', title: 'Когда абонент не абонент', date: 'Today'},
-	{image: '/images/lorem/new2.jpg', text: 'Прямо вот с соседнего стола доносится, свежачок', title: 'Платеж увидел, запустил в работу', date: 'Nov 27, 2022'},
-	{image: '/images/lorem/new3.jpg', text: 'Учимся избегать залетов', title: 'Капуста на дороге не валяется, пару месяцев придется за спасибо', date: 'Nov 26, 2022'},
-]
+const news = items.slice(0, 3).map(el => {
+	return {
+		image: el.thumbnail,
+		text: el.description && 'Как выцепить нужного человечка? Разбираемся с аналитиками',
+		title: el.title,
+		link: el.guid,
+		date: el.pubDate.split(' ').at(0)
+	}
+})
+//
+// const news = [
+// 	{image: '/images/lorem/new1.jpg', text: 'Как выцепить нужного человечка? Разбираемся с аналитиками', title: 'Когда абонент не абонент', date: 'Today'},
+// 	{image: '/images/lorem/new2.jpg', text: 'Прямо вот с соседнего стола доносится, свежачок', title: 'Платеж увидел, запустил в работу', date: 'Nov 27, 2022'},
+// 	{image: '/images/lorem/new3.jpg', text: 'Учимся избегать залетов', title: 'Капуста на дороге не валяется, пару месяцев придется за спасибо', date: 'Nov 26, 2022'},
+// ]
 </script>
 
 <style scoped lang="scss">

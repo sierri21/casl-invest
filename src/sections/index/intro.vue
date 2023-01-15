@@ -56,9 +56,26 @@
     padding: 0 80px;
     transform: translateX(-50%);
     box-sizing: border-box;
+    @media screen and (max-width: 1024px) {
+      bottom: 50px;
+      left: 0;
+      max-width: 100vw;
+      transform: none;
+      padding-left: 40px;
+    }
+    @media screen and (max-width: 500px) {
+      bottom: 0px;
+      left: 0;
+      max-width: 100vw;
+      transform: none;
+      padding-left: 40px;
+    }
 
     p {
       margin-bottom: 50px;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
 
       &:first-child {
         max-width: 480px;
@@ -89,6 +106,14 @@
   z-index: 20;
   mix-blend-mode: difference;
   background-blend-mode: difference;
+  @media screen and (max-width: 1024px){
+    padding-bottom: 550px;
+    top: 200px;
+  }
+  @media screen and (max-width: 500px){
+    padding-bottom: 300px;
+    top: 100px;
+  }
 }
 
 

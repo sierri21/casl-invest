@@ -61,6 +61,9 @@ const { stop } = useIntersectionObserver(
 
   grid-column-gap: 230px;
   grid-row-gap: 28px;
+
+  padding: 148px 40px 113px;
+
   @media screen and (max-width: 1439px) {
     grid-column-gap: 175px;
   }
@@ -75,12 +78,13 @@ const { stop } = useIntersectionObserver(
   @media screen and (max-width: 768px) {
     grid-template-columns: 145px 1fr;
     grid-column-gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   align-items: center;
   justify-items: center;
 
-  padding: 148px 40px 113px;
   &__headline {
     grid-area: headline;
     max-width: 534px;

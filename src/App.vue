@@ -22,8 +22,9 @@ import IndexPage from '~/pages/index-page.vue'
 import { ref } from 'vue'
 const preload = ref(false)
 
-// const scale = window.innerWidth / 1440
+const scale = window.innerWidth / 1440
 
+console.log(scale)
 const videoHandler = () => {
 	preload.value = false
 }
@@ -34,7 +35,8 @@ const videoHandler = () => {
   max-width: 100vw;
   width: 100%;
   background: url('/images/background.svg') center 0 / 100vw no-repeat;
-  //transform-origin: inherit;
+  transform-origin: top center;
+  transform: scale(1);
 }
 .preload {
   height: 100vh;

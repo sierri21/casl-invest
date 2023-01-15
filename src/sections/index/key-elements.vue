@@ -56,7 +56,9 @@ const cards = [
   @media screen and (max-width: 768px) {
     grid-template-columns: 150px 1fr;
     grid-column-gap: 20px;
-    grid-template-rows: repeat(3, 150px);
+    grid-template-rows: repeat(3, 100px);
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   h2 {
@@ -79,7 +81,7 @@ const cards = [
     grid-template-columns: 150px 1fr;
   }
   @media screen and (max-width: 768px) {
-    //grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   img {
